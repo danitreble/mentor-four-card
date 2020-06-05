@@ -1,5 +1,166 @@
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-dark-blue: hsl(234, 12%, 34%);
+  --color-gray-blue: hsl(229, 6%, 66%);
+  --color-light-gray: hsl(0, 0%, 98%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--color-light-gray);
+  font-family: "Poppins", sans-serif;
+}
+
+.page-top {
+  text-align: center;
+}
+
+.title {
+  margin-top: 90px;
+
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.title--bold {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.description {
+  width: 90%;
+  margin: 30px auto 0;
+
+  font-weight: 400;
+  font-size: 1rem;
+
+  color: var(--color-gray-blue);
+}
+
+.tool {
+  position: relative;
+  height: 200px;
+  width: 80%;
+  margin: 0 auto 25px;
+
+  padding: 30px 30px 0 30px;
+
+  background-color: white;
+  border-radius: 4px;
+  transition: box-shadow 300ms;
+}
+
+.tool:hover {
+  box-shadow: 0px 10px 15px rgb(33,33,33,.15);
+}
+
+.tool__icon {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  height: 50px;
+  width: 50px;
+}
+
+.tool__title {
+  font-size: 1.3rem;
+}
+
+.tool__description {
+  margin-top: 5px;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-gray-blue);
+}
+
+.tool--supervisor {
+  margin-top: 70px;
+  border-top: 3px solid var(--color-cyan);
+}
+
+.tool--builder {
+  border-top: 3px solid var(--color-red);
+}
+
+.tool--karma {
+  border-top: 3px solid var(--color-orange);
+}
+
+.tool--calculator {
+  border-top: 3px solid var(--color-blue);
+  margin-bottom: 100px;
+}
+
+@media only screen and (min-width: 601px) {
+  .tool {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    height: 100%;
+  }
+
+  .tool__text {
+    margin-right: 35px;
+  }
+
+  .tool__icon {
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+@media only screen and (min-width: 1440px) {
+  .tool {
+    display: block;
+    padding-bottom: 0;
+    height: 200px;
+    width: 350px;
+
+    margin: 0 0 25px 0;
+  }
+
+  .tool__icon {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+
+  .tool__container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+  }
+
+  .description {
+    width: 30%;
+  }
+
+  .tool--supervisor {
+    margin: 150px 25px 25px 0;
+  }
+
+  .tool--calculator {
+    margin: 150px 0 25px 25px;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+} 
