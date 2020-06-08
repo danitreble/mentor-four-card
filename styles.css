@@ -21,6 +21,7 @@ html {
 body {
   background-color: var(--color-light-gray);
   font-family: "Poppins", sans-serif;
+  min-width: 400px;
 }
 
 .page-top {
